@@ -7,6 +7,7 @@
 //
 
 #import "CommonControlViewController.h"
+#import "LableView.h"
 
 @interface CommonControlViewController()
 
@@ -29,6 +30,7 @@
 }
 
 - (void)initUIElement{
+    //AlertView Button
     self.alterViewBut = [[UIButton alloc] initWithFrame:CGRectMake(50, 80, 280, 45)];
     [self.alterViewBut setTitle:@"AlertView" forState:UIControlStateNormal];
     [self.alterViewBut setBackgroundColor:[UIColor grayColor]];
@@ -37,12 +39,26 @@
     [self.alterViewBut addTarget:self action:@selector(displayAlterView) forControlEvents:UIControlEventTouchDown];
     self.basicView = [[UIView alloc] init];
     [self.basicView addSubview:self.alterViewBut];
+    
+    //UILable Button
+    self.labelViewBut = [[UIButton alloc] initWithFrame:CGRectMake(50, 130, 280, 45)];
+    [self.labelViewBut setTitle:@"UILabel" forState:UIControlStateNormal];
+    [self.labelViewBut setBackgroundColor:[UIColor grayColor]];
+    [self.labelViewBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [self.labelViewBut addTarget:self action:@selector(displayUILabelView) forControlEvents:UIControlEventTouchDown];
+    [self.basicView addSubview:self.labelViewBut];
     self.view = self.basicView;
 }
 
-#pragma mark UIAlertView Call Function
+-(void)displayUILabelView{
+    LableView *labelView = [[LableView alloc] init];
+    self.view = labelView;
+}
 
-- (void)displayAlterView{
+#pragma mark UIAlertView Call Function [Start:2015年01月20日 - End:2015年01月21日]
+
+-(void)displayAlterView{
     self.basicAlertView = [[UIAlertView alloc] initWithTitle:@"Tips"
                                                      message:@"Want to join us?"
                                                     delegate:self
@@ -88,7 +104,7 @@
     NSLog(@"第一个其他按钮的索引是:%ld",self.basicAlertView.firstOtherButtonIndex);
     
     //定制AlertView 视图
-    [self customerAlertView];
+    //[self customerAlertView];
     
     //AlertView 所有文本左对齐
     [self changeAlertViewTextToLeft];
