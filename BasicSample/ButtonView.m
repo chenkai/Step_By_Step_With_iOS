@@ -14,7 +14,9 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self initUIButtonElement];
+        self.tintColor = [UIColor greenColor];
+        //[self initUIButtonElement];
+        [self initImageButton];
     }
     return self;
 }
@@ -39,10 +41,26 @@
     [_controlBut setBackgroundImage:[UIImage imageNamed:@"School.jpg"] forState:UIControlStateDisabled];//Disabled 状态
     
     
+    //点击事件
+    [_controlBut addTarget:self action:@selector(buttonClickAction) forControlEvents:UIControlEventTouchDown];
     
     [self addSubview:self.controlBut];
 }
 
+- (void)initImageButton{
+    _imageBut = [[UIButton alloc] initWithFrame:CGRectMake(50,145, 280, 45)];
+    [_imageBut setTitle:@"Image Button" forState:UIControlStateNormal];
+    //[_imageBut setImage:[UIImage imageNamed:@"Girl.jpg"] forState:UIControlStateNormal];
+    [self addSubview:_imageBut];
+}
 
+- (void)buttonClickAction{
+    UIAlertView *sayHellowView = [[UIAlertView alloc] initWithTitle:@"Say Hi"
+                                                           message:@"hello chenkai,some special comment for you"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"click me"
+                                                 otherButtonTitles: nil];
+    [sayHellowView show];
+}
 
 @end

@@ -16,4 +16,10 @@
  */
 @property (nonatomic,retain) UIButton *controlBut;
 
+
+/**
+ *  Define UIButton按钮
+ */
+@property (nonatomic,retain) UIButton *imageBut;
+
 @end
