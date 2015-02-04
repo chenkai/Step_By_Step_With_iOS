@@ -81,14 +81,41 @@
     self.defLabel.layer.borderColor = [[UIColor blueColor] CGColor];
     self.defLabel.layer.borderWidth = 2;
     
-    //设置标签属性文本 [同一个文本里多个不同颜色值]
-    NSString *operatorStr = @"Control String With Bonder";
-    
     [self addSubview:self.defLabel];
-}
+    
+    //增加一个新的UILabel
+    UILabel *attLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 150, 250, 300)];
+    
+    //设置标签属性文本 [同一个文本里多个不同颜色值]
+    NSString *operatorStr = @"Front Operator String";
+    NSString *backOperatorStr = @"Back Operator String";
+    NSMutableAttributedString *frontAttributeStr = [[NSMutableAttributedString alloc] initWithString:operatorStr];
+    [frontAttributeStr addAttribute:NSForegroundColorAttributeName
+                              value:[UIColor greenColor]
+                              range:NSMakeRange(0, operatorStr.length)];
+    
+    NSMutableAttributedString *backgroundStr = [[NSMutableAttributedString alloc] initWithString:backOperatorStr];
+    [backgroundStr addAttribute:NSForegroundColorAttributeName
+                          value:[UIColor redColor]
+                          range:NSMakeRange(0, backgroundStr.length)];
+    
+    [frontAttributeStr appendAttributedString:backgroundStr];
+    attLabel.attributedText = frontAttributeStr;
+    
+    //竖拍显示问题
+    attLabel.text = @"请\n输\n入\n竖\n这\n数\n据";
+    attLabel.numberOfLines = attLabel.text.length;
+    
+    //计算UILbale 随字体多行后高度
+    [attLabel textRectForBounds:CGRectMake(0, 0, 200, 300) limitedToNumberOfLines:20];
 
--(void)setAttributeText{
- 
+    //根据字数多少自适应高度
+    [attLabel setNumberOfLines:0];
+    attLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    attLabel.font = [UIFont fontWithName:@"Arial" size:16];
+    
+    attLabel.text = @"这是一个很长的文本当前数据没有更好测试文案但如果数据是对的";
+    [self addSubview:attLabel];
 }
 
 @end

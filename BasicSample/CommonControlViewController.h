@@ -13,4 +13,5 @@
 @property (nonatomic,retain) UIView *basicView;
 @property (nonatomic,retain) UIButton *alterViewBut;
 @property (nonatomic,retain) UIButton *labelViewBut;
+@property (nonatomic,retain) UIButton *buttonViewBut;
 @end

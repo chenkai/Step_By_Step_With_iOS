@@ -8,6 +8,7 @@
 
 #import "CommonControlViewController.h"
 #import "LableView.h"
+#import "ButtonView.h"
 
 @interface CommonControlViewController()
 
@@ -48,12 +49,26 @@
     
     [self.labelViewBut addTarget:self action:@selector(displayUILabelView) forControlEvents:UIControlEventTouchDown];
     [self.basicView addSubview:self.labelViewBut];
+    
+    //UIButtonView Button
+    self.buttonViewBut = [[UIButton alloc] initWithFrame:CGRectMake(50,180, 280, 45)];
+    [self.buttonViewBut setTitle:@"UIButton" forState:UIControlStateNormal];
+    [self.buttonViewBut setBackgroundColor:[UIColor grayColor]];
+    
+    [self.buttonViewBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.buttonViewBut addTarget:self action:@selector(displayButtonView) forControlEvents:UIControlEventTouchDown];
+    [self.basicView addSubview:self.buttonViewBut];
     self.view = self.basicView;
 }
 
--(void)displayUILabelView{
+- (void)displayUILabelView{
     LableView *labelView = [[LableView alloc] init];
     self.view = labelView;
+}
+
+- (void)displayButtonView{
+    ButtonView *butView = [[ButtonView alloc] init];
+    self.view = butView;
 }
 
 #pragma mark UIAlertView Call Function [Start:2015年01月20日 - End:2015年01月21日]

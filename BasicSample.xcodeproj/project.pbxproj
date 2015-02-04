@@ -14,6 +14,10 @@
 		D63417DC1A6CE41E001EF616 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63417DB1A6CE41E001EF616 /* Images.xcassets */; };
 		D63417DF1A6CE41E001EF616 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63417DD1A6CE41E001EF616 /* LaunchScreen.xib */; };
 		D63417EB1A6CE41F001EF616 /* BasicSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D63417EA1A6CE41F001EF616 /* BasicSampleTests.m */; };
+		D6BAE3B41A80B27F009C618A /* Girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B21A80B27F009C618A /* Girl.jpg */; };
+		D6BAE3B51A80B27F009C618A /* Device.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B31A80B27F009C618A /* Device.jpg */; };
+		D6BAE3B71A80B7AA009C618A /* Schoool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B61A80B7AA009C618A /* Schoool.jpg */; };
+		D6E401461A7A2E61001DEA1D /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E401451A7A2E61001DEA1D /* ButtonView.m */; };
 		D6F684551A6D0CCE00F4AA47 /* MoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F684541A6D0CCE00F4AA47 /* MoAppDelegate.m */; };
 		D6F684581A6D0E7B00F4AA47 /* MoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F684571A6D0E7B00F4AA47 /* MoViewController.m */; };
 		D6F6845C1A6D101A00F4AA47 /* MoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F6845B1A6D101A00F4AA47 /* MoMainView.m */; };
@@ -43,6 +47,11 @@
 		D63417E41A6CE41E001EF616 /* BasicSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63417E91A6CE41F001EF616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63417EA1A6CE41F001EF616 /* BasicSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicSampleTests.m; sourceTree = "<group>"; };
+		D6BAE3B21A80B27F009C618A /* Girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl.jpg; sourceTree = "<group>"; };
+		D6BAE3B31A80B27F009C618A /* Device.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Device.jpg; sourceTree = "<group>"; };
+		D6BAE3B61A80B7AA009C618A /* Schoool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schoool.jpg; sourceTree = "<group>"; };
+		D6E401441A7A2E54001DEA1D /* ButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
+		D6E401451A7A2E61001DEA1D /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
 		D6F684531A6D0CC000F4AA47 /* MoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoAppDelegate.h; sourceTree = "<group>"; };
 		D6F684541A6D0CCE00F4AA47 /* MoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoAppDelegate.m; sourceTree = "<group>"; };
 		D6F684561A6D0E6C00F4AA47 /* MoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoViewController.h; sourceTree = "<group>"; };
@@ -83,6 +92,8 @@
 			children = (
 				D61063681A6F986D00947B3D /* LableView.h */,
 				D61063691A6F987D00947B3D /* LabelView.m */,
+				D6E401441A7A2E54001DEA1D /* ButtonView.h */,
+				D6E401451A7A2E61001DEA1D /* ButtonView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 		D63417CD1A6CE41E001EF616 /* BasicSample */ = {
 			isa = PBXGroup;
 			children = (
+				D6BAE3B01A80B25B009C618A /* Resource */,
 				D6F684591A6D0FF400F4AA47 /* UI */,
 				D6F684511A6D0C5B00F4AA47 /* Application */,
 				D63417D81A6CE41E001EF616 /* Main.storyboard */,
@@ -142,6 +154,24 @@
 				D63417E91A6CE41F001EF616 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6BAE3B01A80B25B009C618A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D6BAE3B11A80B263009C618A /* Images */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		D6BAE3B11A80B263009C618A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D6BAE3B61A80B7AA009C618A /* Schoool.jpg */,
+				D6BAE3B21A80B27F009C618A /* Girl.jpg */,
+				D6BAE3B31A80B27F009C618A /* Device.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		D6F684511A6D0C5B00F4AA47 /* Application */ = {
@@ -254,9 +284,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BAE3B51A80B27F009C618A /* Device.jpg in Resources */,
 				D63417DA1A6CE41E001EF616 /* Main.storyboard in Resources */,
+				D6BAE3B41A80B27F009C618A /* Girl.jpg in Resources */,
 				D63417DF1A6CE41E001EF616 /* LaunchScreen.xib in Resources */,
 				D63417DC1A6CE41E001EF616 /* Images.xcassets in Resources */,
+				D6BAE3B71A80B7AA009C618A /* Schoool.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +311,7 @@
 				D6F684551A6D0CCE00F4AA47 /* MoAppDelegate.m in Sources */,
 				D61063661A6E6A0700947B3D /* CommonControlViewController.m in Sources */,
 				D63417D11A6CE41E001EF616 /* main.m in Sources */,
+				D6E401461A7A2E61001DEA1D /* ButtonView.m in Sources */,
 				D6F6845C1A6D101A00F4AA47 /* MoMainView.m in Sources */,
 				D610636A1A6F987D00947B3D /* LabelView.m in Sources */,
 			);
