@@ -72,7 +72,12 @@
     
     [_imageBut addTarget:self action:@selector(imageButtonTouchDragOutside) forControlEvents:UIControlEventTouchDragOutside];
     [_imageBut addTarget:self action:@selector(imageButtonTouchDragEnter) forControlEvents:UIControlEventTouchDragEnter];
+    [_imageBut addTarget:self action:@selector(imageButtonTouchDragExist) forControlEvents:UIControlEventTouchDragExit];
     
+    
+    [_imageBut addTarget:self action:@selector(imageButtonTouchDragUpInside) forControlEvents:UIControlEventTouchUpInside];
+    [_imageBut addTarget:self action:@selector(imageButtonTouchDragUpOutside) forControlEvents:UIControlEventTouchUpOutside];
+    [_imageBut addTarget:self action:@selector(imageButtonTouchCancel) forControlEvents:UIControlEventTouchCancel];
     
     //UIControlEventTouchDown 单点触摸按下时间:用户点触屏幕，或者又有新手指落下时候触发.
     //UIControlEventTouchDownRepeat 多点触摸按下事件：点触计数大于1-用户按下第二 三或第四手指触发.
@@ -80,6 +85,30 @@
     //UIControlEventTouchDragInside 当一次触摸控件窗口内拖动时触发
     //UIControlEventTouchDragOutside 当一次触摸控件窗口外拖动是触发
     //UIControlEventTouchDragEnter 当一次触摸控件从窗口之外拖动到内部时触发
+    //UIControlEventTouchDragExit 当一次触摸从控件窗口内部拖到外部是.
+    
+    //UIControlEventTouchUpInside 所有控件在控件之内拖动结束时触摸抬起事件
+    //UIControlEventTouchUpOutside 所有控件在控件之外拖动借宿触摸抬起事件【点触必须开始与控件内部才会发送通知 -----没弄明白】
+    //UIControlEventTouchCancel 所有触摸取消事件，即一次触摸因为放上了太多手指而被取消，或者被上锁或者电话呼叫打断。
+    
+    //Get All Target Event List [Remove Before]
+    NSSet *eventActions = [_imageBut allTargets];
+    NSUInteger counter = [eventActions count];
+    NSLog(@"删除前:%lu",(unsigned long)counter);
+    
+    //Add One Move TouchDown Event
+    [_imageBut addTarget:self action:@selector(imageButtonTouchEventTwo) forControlEvents:UIControlEventTouchDown];
+    
+    //Remove Event
+    //[_imageBut removeTarget:self action:@selector(imageButtonEvent:) forControlEvents:UIControlEventTouchDown];
+    
+    //Get All Target Event List [Remove After]
+    //eventActions = [_imageBut allTargets];
+    //NSLog(@"删除后:%lu",(unsigned long)[eventActions count]);
+    
+    //Get Single Action Event Count
+//    NSArray *singleSetValue = [_imageBut actionsForTarget:self forControlEvent:UIControlEventTouchDown];
+//    NSLog(@"单个TouchDown Event 数量:%lu",(unsigned long)[singleSetValue count]);
     
     _imageBut.showsTouchWhenHighlighted = YES;
     [self addSubview:_imageBut];
@@ -104,29 +133,42 @@
     [_imageBut setTitleShadowColor:[UIColor redColor] forState:UIControlStateNormal];
     _imageBut.adjustsImageWhenDisabled = NO;
     
-    
-    //Argument With Button
-//    UIButton *convertButton = (UIButton *)sender;
-//    if (convertButton != nil) {
-//        [convertButton setTitle:@"Clicked" forState:UIControlStateNormal];
-//    }
-    
+}
+
+- (void)imageButtonTouchEventTwo{
+    NSLog(@"event two");
 }
 
 - (void)imageButtonTouchDownRepeat{
-    NSLog(@"click TouchDown Repeat Event");
+    NSLog(@"Touch Down Repeat Event");
 }
 
 - (void)imageButtonTouchDragInside{
-    NSLog(@"click TouchDrag Inside Event");
+    NSLog(@"Drag Inside");
 }
 
 - (void)imageButtonTouchDragOutside{
-    NSLog(@"click TouchDrag Outside Event");
+    NSLog(@"Drag Outside Event");
 }
 
 - (void)imageButtonTouchDragEnter{
-    NSLog(@"click TouchDrag Enter Event");
+    NSLog(@"Drag Enter Event");
+}
+
+- (void)imageButtonTouchDragExist{
+    NSLog(@"Drag Exist");
+}
+
+- (void)imageButtonTouchDragUpInside{
+    NSLog(@"Drag Up Inside");
+}
+
+- (void)imageButtonTouchDragUpOutside{
+    NSLog(@"Drag Up OutSide");
+}
+
+- (void)imageButtonTouchCancel{
+    NSLog(@"Drag Cancel");
 }
 
 - (void)buttonClickAction{
