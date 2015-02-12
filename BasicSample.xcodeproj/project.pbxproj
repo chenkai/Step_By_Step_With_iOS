@@ -17,6 +17,8 @@
 		D6BAE3B41A80B27F009C618A /* Girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B21A80B27F009C618A /* Girl.jpg */; };
 		D6BAE3B51A80B27F009C618A /* Device.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B31A80B27F009C618A /* Device.jpg */; };
 		D6BAE3B71A80B7AA009C618A /* Schoool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B61A80B7AA009C618A /* Schoool.jpg */; };
+		D6C3A5F41A88AE5A0014CA07 /* UITextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C3A5F31A88AE5A0014CA07 /* UITextFieldView.m */; };
+		D6D41B7C1A8B5B590088CDF8 /* DelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D41B7B1A8B5B590088CDF8 /* DelegateView.m */; };
 		D6E401461A7A2E61001DEA1D /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E401451A7A2E61001DEA1D /* ButtonView.m */; };
 		D6F684551A6D0CCE00F4AA47 /* MoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F684541A6D0CCE00F4AA47 /* MoAppDelegate.m */; };
 		D6F684581A6D0E7B00F4AA47 /* MoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F684571A6D0E7B00F4AA47 /* MoViewController.m */; };
@@ -50,6 +52,10 @@
 		D6BAE3B21A80B27F009C618A /* Girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl.jpg; sourceTree = "<group>"; };
 		D6BAE3B31A80B27F009C618A /* Device.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Device.jpg; sourceTree = "<group>"; };
 		D6BAE3B61A80B7AA009C618A /* Schoool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schoool.jpg; sourceTree = "<group>"; };
+		D6C3A5F21A88AE480014CA07 /* UITextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldView.h; sourceTree = "<group>"; };
+		D6C3A5F31A88AE5A0014CA07 /* UITextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldView.m; sourceTree = "<group>"; };
+		D6D41B7A1A8B5B380088CDF8 /* DelegateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateView.h; sourceTree = "<group>"; };
+		D6D41B7B1A8B5B590088CDF8 /* DelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateView.m; sourceTree = "<group>"; };
 		D6E401441A7A2E54001DEA1D /* ButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
 		D6E401451A7A2E61001DEA1D /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
 		D6F684531A6D0CC000F4AA47 /* MoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoAppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 				D61063691A6F987D00947B3D /* LabelView.m */,
 				D6E401441A7A2E54001DEA1D /* ButtonView.h */,
 				D6E401451A7A2E61001DEA1D /* ButtonView.m */,
+				D6C3A5F21A88AE480014CA07 /* UITextFieldView.h */,
+				D6C3A5F31A88AE5A0014CA07 /* UITextFieldView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -174,6 +182,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		D6D41B791A8B5B0B0088CDF8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6D41B7A1A8B5B380088CDF8 /* DelegateView.h */,
+				D6D41B7B1A8B5B590088CDF8 /* DelegateView.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		D6F684511A6D0C5B00F4AA47 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 		D6F684591A6D0FF400F4AA47 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D6D41B791A8B5B0B0088CDF8 /* Components */,
 				D61063671A6F985600947B3D /* Views */,
 				D61063621A6E39BA00947B3D /* Controls */,
 				D6F6845A1A6D100700F4AA47 /* MoMainView.h */,
@@ -312,7 +330,9 @@
 				D61063661A6E6A0700947B3D /* CommonControlViewController.m in Sources */,
 				D63417D11A6CE41E001EF616 /* main.m in Sources */,
 				D6E401461A7A2E61001DEA1D /* ButtonView.m in Sources */,
+				D6D41B7C1A8B5B590088CDF8 /* DelegateView.m in Sources */,
 				D6F6845C1A6D101A00F4AA47 /* MoMainView.m in Sources */,
+				D6C3A5F41A88AE5A0014CA07 /* UITextFieldView.m in Sources */,
 				D610636A1A6F987D00947B3D /* LabelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

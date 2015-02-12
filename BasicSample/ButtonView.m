@@ -110,6 +110,7 @@
 //    NSArray *singleSetValue = [_imageBut actionsForTarget:self forControlEvent:UIControlEventTouchDown];
 //    NSLog(@"单个TouchDown Event 数量:%lu",(unsigned long)[singleSetValue count]);
     
+    
     _imageBut.showsTouchWhenHighlighted = YES;
     [self addSubview:_imageBut];
 }
