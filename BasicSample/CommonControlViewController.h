@@ -10,8 +10,14 @@
 
 @interface CommonControlViewController : UIViewController<UIAlertViewDelegate>
 
+//UIControls
 @property (nonatomic,retain) UIView *basicView;
 @property (nonatomic,retain) UIButton *alterViewBut;
 @property (nonatomic,retain) UIButton *labelViewBut;
 @property (nonatomic,retain) UIButton *buttonViewBut;
+
+//Protocol & Category
+@property (nonatomic,retain) UIButton *protocolViewBut;
+@property (nonatomic,retain) UIButton *categoryViewBut;
+
 @end

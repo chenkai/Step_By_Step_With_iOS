@@ -9,6 +9,8 @@
 #import "CommonControlViewController.h"
 #import "LableView.h"
 #import "ButtonView.h"
+#import "DelegateView.h"
+#import "CategoryView.h"
 
 @interface CommonControlViewController()
 
@@ -58,7 +60,35 @@
     [self.buttonViewBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.buttonViewBut addTarget:self action:@selector(displayButtonView) forControlEvents:UIControlEventTouchDown];
     [self.basicView addSubview:self.buttonViewBut];
+    
+    //Delegate View Button
+    self.protocolViewBut = [[UIButton alloc] initWithFrame:CGRectMake(50,230, 280, 45)];
+    [self.protocolViewBut setTitle:@"Protocol" forState:UIControlStateNormal];
+    [self.protocolViewBut setTintColor:[UIColor whiteColor]];
+    
+    [self.protocolViewBut setBackgroundColor:[UIColor grayColor]];
+    [self.protocolViewBut addTarget:self action:@selector(displayProtocolView) forControlEvents:UIControlEventTouchDown];
+    [self.basicView addSubview:self.protocolViewBut];
+    
+    //Category View Button
+    self.categoryViewBut = [[UIButton alloc] initWithFrame:CGRectMake(50, 280, 280, 45)];
+    [self.categoryViewBut setTitle:@"Category" forState:UIControlStateNormal];
+    [self.categoryViewBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [self.categoryViewBut setBackgroundColor:[UIColor grayColor]];
+    [self.categoryViewBut addTarget:self action:@selector(displayCategoryView) forControlEvents:UIControlEventTouchDown];
+    [self.basicView addSubview:_categoryViewBut];
     self.view = self.basicView;
+}
+
+- (void)displayCategoryView{
+    CategoryView *categroyView = [[CategoryView alloc] init];
+    self.view = categroyView;
+}
+
+- (void)displayProtocolView{
+    DelegateView *defineView = [[DelegateView alloc] init];
+    self.view = defineView;
 }
 
 - (void)displayUILabelView{

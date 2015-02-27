@@ -13,6 +13,26 @@
 @synthesize customerAddress;
 @synthesize customerName;
 
+- (instancetype)initWithFrame:(CGRect)frame{
+     self = [super initWithFrame:frame];
+    //判断某个类是否已经实现某个Protocol协议
+    if (self) {
+        if ([self conformsToProtocol:@protocol(SecondDelegate)]) {
+            NSLog(@"Implementation Second Delegate");
+        }
+        
+        if ([self conformsToProtocol:@protocol(FirstDelegate)]){
+            NSLog(@"Implementation First Delegate");
+        }
+        
+        if ([self conformsToProtocol:@protocol(ThreeDelegate)]) {
+            NSLog(@"Implementation Three Delegate");
+        }
+    }
+
+    return self;
+}
+
 -(void)outPutCustomerOrderDetail:(NSInteger)customerId{
     if (customerId > 0) {
         NSLog(@"hi JeffyChen You Customer Order Is Send To Print,CustomerId:%ld",(long)customerId);
@@ -28,6 +48,12 @@
     if (customerId > 0) {
         customerAddress = @"Order Detail has add Customer Name";
         NSLog(@"status:%@",customerAddress);
+    }
+}
+
+-(void)getCustomerLocationServiceData:(NSInteger)customerId locationArea:(NSString *)locationAreaId{
+    if ([locationAreaId length] > 0) {
+        NSLog(@"Customer Location Area is China Streat");
     }
 }
 

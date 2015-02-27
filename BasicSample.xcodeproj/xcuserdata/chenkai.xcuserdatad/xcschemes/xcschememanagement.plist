@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SimpleTimerTodayExtenstion.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>D63417E31A6CE41E001EF616</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6AD7FFC1AA024ED001D3CDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
