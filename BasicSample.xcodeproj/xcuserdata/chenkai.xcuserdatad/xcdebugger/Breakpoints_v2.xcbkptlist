@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SimpleTimerTodayExtenstion/TodayViewController.m"
-            timestampString = "446716925.259281"
+            timestampString = "446721965.407018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -64,6 +64,22 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BasicSample/MoAppDelegate.m"
+            timestampString = "446723315.824041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-application:openURL:sourceApplication:annotation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

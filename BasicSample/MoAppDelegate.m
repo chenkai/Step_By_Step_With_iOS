@@ -24,4 +24,15 @@
 }
 
 
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    if ([url.scheme isEqualToString:@"Baisci"]) {
+        if ([url.host isEqualToString:@"finished"]) {
+            UIAlertView *finishedView = [[UIAlertView alloc] init];
+            finishedView.title = @"finished";
+            [finishedView show];
+        }
+    }
+    return FALSE;
+}
+
 @end

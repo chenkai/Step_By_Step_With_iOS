@@ -1018,6 +1018,7 @@
 				D6AD800D1AA024ED001D3CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6AD802E1AA04E06001D3CDD /* Build configuration list for PBXNativeTarget "SimpleTimerKit" */ = {
 			isa = XCConfigurationList;
@@ -1026,6 +1027,7 @@
 				D6AD80301AA04E06001D3CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6AD80321AA04E06001D3CDD /* Build configuration list for PBXNativeTarget "SimpleTimerKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1034,6 +1036,7 @@
 				D6AD80341AA04E06001D3CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
