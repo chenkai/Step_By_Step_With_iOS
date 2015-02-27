@@ -86,6 +86,11 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
 
+//    对于通知中心扩展，即使你的扩展现在不可见 (也就是用户没有拉开通知中心)，系统也会时不时地调用实现了 NCWidgetProviding
+//    的扩展的这个方法，来要求扩展刷新界面。这个机制和 iOS 7 引入的后台机制是很相似的。
+//    在这个方法中我们一般可以做一些像 API 请求之类的事情，在获取到了数据并更新了界面，
+//    或者是失败后都使用提供的 completionHandler 来向系统进行报告
+    
     completionHandler(NCUpdateResultNewData);
 }
 
