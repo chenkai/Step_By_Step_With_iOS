@@ -18,8 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
 
+    //监听是否触发Home键挂起程序
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observerTheWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    
+    //监听是否重新进入应用程序
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observerTheBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    //自定义一个UILable显示通知栏中.
+    UILabel *customerUserName = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 60)];
+    customerUserName.text = @"hi chenkai";
+    customerUserName.textColor = [UIColor whiteColor];
+    [self.view addSubview:customerUserName];
+}
+
+- (void) observerTheWillResignActive:(NSNotification *)notification{
+    NSLog(@"Goto Background[Reign Active]");
+}
+
+- (void) observerTheBecomeActive:(NSNotification *)notification{
+    NSLog(@"Goto Foreground[Become Active]");
 }
 
 - (void)didReceiveMemoryWarning {

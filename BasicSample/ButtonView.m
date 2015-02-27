@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ButtonView.h"
+#import "Category+Reminder.h"
 
 @implementation ButtonView
 
@@ -17,6 +18,7 @@
         self.tintColor = [UIColor greenColor];
         [self initUIButtonElement];
         [self initImageButton];
+        [self initThirdButton];
     }
     return self;
 }
@@ -113,6 +115,25 @@
     
     _imageBut.showsTouchWhenHighlighted = YES;
     [self addSubview:_imageBut];
+}
+
+- (void)initThirdButton{
+    UIButton *runThirdPartyBut = [[UIButton alloc] initWithFrame:CGRectMake(50,200, 280, 45 )];
+    [runThirdPartyBut setTitle:@"Run Third Party Kit" forState:UIControlStateNormal];
+    [runThirdPartyBut setBackgroundColor:[UIColor grayColor]];
+    
+    [runThirdPartyBut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [runThirdPartyBut addTarget:self action:@selector(thirdParkCallFunction) forControlEvents:UIControlEventTouchDown];
+    [self addSubview:runThirdPartyBut];
+}
+
+#pragma mark Run Third Party Function
+
+- (void) thirdParkCallFunction{
+    NSLog(@"Third Party Call Stared");
+    CategoryView *defineView = [[CategoryView alloc] init];
+    [defineView ReminderCustomerPayment:@"Keep Tip" language:@"Chinese"];
+    NSLog(@"Third Party Call Finished");
 }
 
 #pragma mark Run Sample Of Button Event

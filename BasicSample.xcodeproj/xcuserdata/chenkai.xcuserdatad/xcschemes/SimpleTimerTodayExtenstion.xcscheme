@@ -35,6 +35,20 @@
                ReferencedContainer = "container:BasicSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D6AD801E1AA04E06001D3CDD"
+               BuildableName = "SimpleTimerKitTests.xctest"
+               BlueprintName = "SimpleTimerKitTests"
+               ReferencedContainer = "container:BasicSample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -43,13 +57,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D6AD801E1AA04E06001D3CDD"
+               BuildableName = "SimpleTimerKitTests.xctest"
+               BlueprintName = "SimpleTimerKitTests"
+               ReferencedContainer = "container:BasicSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6AD7FFC1AA024ED001D3CDD"
-            BuildableName = "SimpleTimerTodayExtenstion.appex"
-            BlueprintName = "SimpleTimerTodayExtenstion"
+            BlueprintIdentifier = "D63417CA1A6CE41E001EF616"
+            BuildableName = "BasicSample.app"
+            BlueprintName = "BasicSample"
             ReferencedContainer = "container:BasicSample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,7 +88,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <IDERemoteRunnable
+         RemotePath = "/Today-View"
+         BundleIdentifier = "/Today-View">
+      </IDERemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D63417CA1A6CE41E001EF616"
@@ -72,7 +100,7 @@
             BlueprintName = "BasicSample"
             ReferencedContainer = "container:BasicSample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

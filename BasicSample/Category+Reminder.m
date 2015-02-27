@@ -7,6 +7,8 @@
 //
 
 #import "Category+Reminder.h"
+#import "TimerPackageManager.h"
+#import "CarTransportInfoManager.h"
 
 @implementation CategoryView(Reminder)
 
@@ -14,6 +16,14 @@
     if (reminderText.length > 0 && language.length > 0) {
         NSLog(@"hi jackline credit card payment date is expired,Language:%@",language);
     }
+    
+    //Print Package Address With TimeStamp
+    TimerPackageManager *packageManager = [[TimerPackageManager alloc] init];
+    [packageManager mergePackageInfoByAddress:@"ChaoYang Dest JinMing Road 104"];
+    
+    //Get Car Transport Information
+    CarTransportInfoManager *transportManager = [[CarTransportInfoManager alloc] init];
+    NSLog(@"%@", [transportManager carTransportRodeMapInfo:@"BJCAR_040862_JINMING"]);
 }
 
 @end
