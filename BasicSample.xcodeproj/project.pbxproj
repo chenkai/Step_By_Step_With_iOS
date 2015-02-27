@@ -25,6 +25,7 @@
 		D6AD802D1AA04E06001D3CDD /* SimpleTimerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6AD80151AA04E06001D3CDD /* SimpleTimerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6AD803A1AA04FFA001D3CDD /* TimerPackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AD80371AA04EB7001D3CDD /* TimerPackageManager.m */; };
 		D6AD803D1AA050E7001D3CDD /* CarTransportInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AD803C1AA050E7001D3CDD /* CarTransportInfoManager.m */; };
+		D6AD80471AA0595B001D3CDD /* SimpleTimerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AD80151AA04E06001D3CDD /* SimpleTimerKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D6BAE3B41A80B27F009C618A /* Girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B21A80B27F009C618A /* Girl.jpg */; };
 		D6BAE3B51A80B27F009C618A /* Device.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B31A80B27F009C618A /* Device.jpg */; };
 		D6BAE3B71A80B7AA009C618A /* Schoool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6BAE3B61A80B7AA009C618A /* Schoool.jpg */; };
@@ -68,6 +69,13 @@
 			remoteInfo = BasicSample;
 		};
 		D6AD802A1AA04E06001D3CDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D63417C31A6CE41E001EF616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6AD80141AA04E06001D3CDD;
+			remoteInfo = SimpleTimerKit;
+		};
+		D6AD80401AA05875001D3CDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D63417C31A6CE41E001EF616 /* Project object */;
 			proxyType = 1;
@@ -131,6 +139,10 @@
 		D6AD80371AA04EB7001D3CDD /* TimerPackageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerPackageManager.m; sourceTree = "<group>"; };
 		D6AD803B1AA050D3001D3CDD /* CarTransportInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarTransportInfoManager.h; sourceTree = "<group>"; };
 		D6AD803C1AA050E7001D3CDD /* CarTransportInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarTransportInfoManager.m; sourceTree = "<group>"; };
+		D6AD80431AA05948001D3CDD /* CarTransportInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarTransportInfoManager.h; sourceTree = "<group>"; };
+		D6AD80441AA05948001D3CDD /* CarTransportInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarTransportInfoManager.m; sourceTree = "<group>"; };
+		D6AD80451AA05948001D3CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6AD80461AA05948001D3CDD /* SimpleTimerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTimerKit.h; sourceTree = "<group>"; };
 		D6BAE3B21A80B27F009C618A /* Girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl.jpg; sourceTree = "<group>"; };
 		D6BAE3B31A80B27F009C618A /* Device.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Device.jpg; sourceTree = "<group>"; };
 		D6BAE3B61A80B7AA009C618A /* Schoool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schoool.jpg; sourceTree = "<group>"; };
@@ -172,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AD80471AA0595B001D3CDD /* SimpleTimerKit.framework in Frameworks */,
 				D6AD80001AA024ED001D3CDD /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +298,7 @@
 		D6AD7FFE1AA024ED001D3CDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6AD80421AA05948001D3CDD /* SimpleTimerKit */,
 				D6AD7FFF1AA024ED001D3CDD /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -352,6 +366,17 @@
 				D6AD80371AA04EB7001D3CDD /* TimerPackageManager.m */,
 			);
 			name = CommonTimer;
+			sourceTree = "<group>";
+		};
+		D6AD80421AA05948001D3CDD /* SimpleTimerKit */ = {
+			isa = PBXGroup;
+			children = (
+				D6AD80431AA05948001D3CDD /* CarTransportInfoManager.h */,
+				D6AD80441AA05948001D3CDD /* CarTransportInfoManager.m */,
+				D6AD80451AA05948001D3CDD /* Info.plist */,
+				D6AD80461AA05948001D3CDD /* SimpleTimerKit.h */,
+			);
+			path = SimpleTimerKit;
 			sourceTree = "<group>";
 		};
 		D6BAE3B01A80B25B009C618A /* Resource */ = {
@@ -480,6 +505,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D6AD80411AA05875001D3CDD /* PBXTargetDependency */,
 			);
 			name = SimpleTimerTodayExtenstion;
 			productName = SimpleTimerTodayExtenstion;
@@ -698,6 +724,11 @@
 			target = D6AD80141AA04E06001D3CDD /* SimpleTimerKit */;
 			targetProxy = D6AD802A1AA04E06001D3CDD /* PBXContainerItemProxy */;
 		};
+		D6AD80411AA05875001D3CDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6AD80141AA04E06001D3CDD /* SimpleTimerKit */;
+			targetProxy = D6AD80401AA05875001D3CDD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -877,6 +908,7 @@
 		D6AD802F1AA04E06001D3CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -900,6 +932,7 @@
 		D6AD80301AA04E06001D3CDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

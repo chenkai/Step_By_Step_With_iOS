@@ -8,6 +8,8 @@
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import "TimerPackageManager.h"
+#import "CarTransportInfoManager.h"
 
 @interface TodayViewController () <NCWidgetProviding>
 
@@ -30,6 +32,14 @@
     customerUserName.text = @"hi chenkai";
     customerUserName.textColor = [UIColor whiteColor];
     [self.view addSubview:customerUserName];
+    
+    //测试引入第三方库是否成功调用
+    TimerPackageManager *packageManager = [[TimerPackageManager alloc] init];
+    [packageManager mergePackageInfoByAddress:@"Da Yuan Road"];
+    
+    CarTransportInfoManager *transportManager = [[CarTransportInfoManager alloc] init];
+    NSLog(@"%@", [transportManager carTransportRodeMapInfo:@"Dong Ming"]);
+
 }
 
 - (void) observerTheWillResignActive:(NSNotification *)notification{
